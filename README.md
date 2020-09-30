@@ -12,7 +12,7 @@ Here is what is needed:
 # Replacing the Access Token
 In order for your quickstart application to work, we need to authenticate an end user by retrieving a short-lived access token attached to your API Key. 
 
-The `ConversationsConstants.swift` source code file has a placeholder for your access token named  `testAccessToken`.
+The `ConversationsConstants.swift` source code file has a placeholder for your access token named  `TEST_ACCESS_TOKEN`. If you do not replace this token, the app won't compile and build.
 
 You can generate a token in a few ways:
 * Using the [twilio-cli](https://www.twilio.com/docs/twilio-cli/quickstart) and [twilio token plugin](https://github.com/twilio-labs/plugin-token) (Recommended)
