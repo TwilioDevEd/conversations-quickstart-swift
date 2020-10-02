@@ -19,7 +19,7 @@ You can generate a token in a few ways:
 * Using [Twilio Runtime Function](https://www.twilio.com/docs/runtime/functions)
 
  For the twilio-cli option, run the following command and enter the resulting token into the placeholder:
- `twilio token:chat --identity <The test username> --chat-service-sid <ISXXX...>
+ `twilio token:chat --identity <The test username> --chat-service-sid <ISXXX...>`
 
 Note: You need to generate an access token with a ChatGrant for a Conversations user to use the Twilio Conversations Client SDK.
 
