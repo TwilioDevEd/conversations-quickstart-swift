@@ -72,6 +72,11 @@ class QuickstartConversationsManager: NSObject, TwilioConversationsClientDelegat
         refreshAccessToken()
     }
     
+    func conversationsClientTokenExpired(_ client: TwilioConversationsClient) {
+        print("Access token expired.")
+        refreshAccessToken()
+    }
+    
     private func refreshAccessToken() {
         guard let identity = identity else {
             return
