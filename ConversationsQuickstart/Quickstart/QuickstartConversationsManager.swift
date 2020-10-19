@@ -180,10 +180,23 @@ class QuickstartConversationsManager: NSObject, TwilioConversationsClientDelegat
         self.conversation = conversation
         if conversation.status == .joined {
             print("Current user already exists in conversation")
+            self.loadPreviousMessages(conversation)
         } else {
             conversation.join(completion: { result in
                 print("Result of conversation join: \(result.resultText ?? "No Result")")
+                if result.isSuccessful {
+                    self.loadPreviousMessages(conversation)
+                }
             })
+        }
+    }
+    
+    private func loadPreviousMessages(_ conversation: TCHConversation) {
+        conversation.getLastMessages(withCount: 100) { (result, messages) in
+            if let messages = messages {
+                self.messages = messages
+                self.delegate?.reloadMessages()
+            }
         }
     }
 }
