@@ -39,6 +39,7 @@ class QuickstartConversationsManager: NSObject, TwilioConversationsClientDelegat
         guard status == .completed else {
             return
         }
+        
         checkConversationCreation { (_, conversation) in
            if let conversation = conversation {
                self.joinConversation(conversation)
@@ -195,7 +196,9 @@ class QuickstartConversationsManager: NSObject, TwilioConversationsClientDelegat
         conversation.getLastMessages(withCount: 100) { (result, messages) in
             if let messages = messages {
                 self.messages = messages
-                self.delegate?.reloadMessages()
+                DispatchQueue.main.async {
+                    self.delegate?.reloadMessages()
+                }
             }
         }
     }
