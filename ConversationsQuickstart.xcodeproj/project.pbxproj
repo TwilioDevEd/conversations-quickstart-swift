@@ -13,7 +13,7 @@
 		286D09EB251AB0E3006D2040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286D09EA251AB0E3006D2040 /* Assets.xcassets */; };
 		286D09EE251AB0E3006D2040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286D09EC251AB0E3006D2040 /* LaunchScreen.storyboard */; };
 		286D09F6251AB342006D2040 /* QuickstartConversationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D09F5251AB341006D2040 /* QuickstartConversationsManager.swift */; };
-		286D09F8251AB362006D2040 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D09F7251AB362006D2040 /* ConversationsViewController.swift */; };
+		286D09F8251AB362006D2040 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D09F7251AB362006D2040 /* ConversationViewController.swift */; };
 		286D09FA251AB379006D2040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D09F9251AB379006D2040 /* Utils.swift */; };
 		286D09FD251AB3E0006D2040 /* ConversationsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D09FC251AB3E0006D2040 /* ConversationsConstants.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,7 @@
 		286D09ED251AB0E3006D2040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		286D09EF251AB0E3006D2040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286D09F5251AB341006D2040 /* QuickstartConversationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickstartConversationsManager.swift; sourceTree = "<group>"; };
-		286D09F7251AB362006D2040 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		286D09F7251AB362006D2040 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		286D09F9251AB379006D2040 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		286D09FC251AB3E0006D2040 /* ConversationsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +77,7 @@
 		286D09FB251AB384006D2040 /* Quickstart */ = {
 			isa = PBXGroup;
 			children = (
-				286D09F7251AB362006D2040 /* ConversationsViewController.swift */,
+				286D09F7251AB362006D2040 /* ConversationViewController.swift */,
 				286D09F5251AB341006D2040 /* QuickstartConversationsManager.swift */,
 				286D09F9251AB379006D2040 /* Utils.swift */,
 				286D09FC251AB3E0006D2040 /* ConversationsConstants.swift */,
@@ -163,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				286D09F8251AB362006D2040 /* ConversationsViewController.swift in Sources */,
+				286D09F8251AB362006D2040 /* ConversationViewController.swift in Sources */,
 				286D09E2251AB0E1006D2040 /* AppDelegate.swift in Sources */,
 				286D09E4251AB0E1006D2040 /* SceneDelegate.swift in Sources */,
 				286D09F6251AB342006D2040 /* QuickstartConversationsManager.swift in Sources */,

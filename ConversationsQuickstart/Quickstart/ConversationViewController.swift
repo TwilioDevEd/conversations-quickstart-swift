@@ -1,5 +1,5 @@
 //
-//  ConversationsViewController.swift
+//  ConversationViewController.swift
 //  ConversationsQuickstart
 //
 //  Created by Jeffrey Linwood on 9/12/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationsViewController: UIViewController {
+class ConversationViewController: UIViewController {
 
     // Important - this identity would be assigned by your app, for
     // instance after a user logs in
@@ -123,7 +123,7 @@ class ConversationsViewController: UIViewController {
 }
 
 // MARK: UITextField Delegate
-extension ConversationsViewController: UITextFieldDelegate {
+extension ConversationViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         conversationsManager.sendMessage(textField.text!, completion: { (result, _) in
             if result.isSuccessful {
@@ -138,7 +138,7 @@ extension ConversationsViewController: UITextFieldDelegate {
 }
 
 // MARK: UITableViewDataSource Delegate
-extension ConversationsViewController: UITableViewDataSource {
+extension ConversationViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -166,7 +166,7 @@ extension ConversationsViewController: UITableViewDataSource {
 }
 
 // MARK: QuickstartConversationsManagerDelegate
-extension ConversationsViewController: QuickstartConversationsManagerDelegate {
+extension ConversationViewController: QuickstartConversationsManagerDelegate {
     func displayStatusMessage(_ statusMessage: String) {
         self.navigationItem.prompt = statusMessage
     }
