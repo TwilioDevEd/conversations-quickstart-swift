@@ -3,7 +3,7 @@
 //  ConversationsQuickstart
 //
 //  Created by Jeffrey Linwood on 9/12/20.
-//  Copyright © 2020 Twilio, Inc. All rights reserved.
+//  Copyright © 2020-2022 Twilio, Inc. All rights reserved.
 //
 
 import UIKit
@@ -101,12 +101,11 @@ class QuickstartConversationsManager: NSObject, TwilioConversationsClientDelegat
 
     func sendMessage(_ messageText: String,
                      completion: @escaping (TCHResult, TCHMessage?) -> Void) {
-        
-        let messageOptions = TCHMessageOptions().withBody(messageText)
-        conversation?.sendMessage(with: messageOptions, completion: { (result, message) in
-            completion(result, message)
-        })
-    
+        conversation?.prepareMessage()
+            .setBody(messageText)
+            .buildAndSend { (result, message) in
+                completion(result, message)
+            }
     }
 
     func loginFromServer(_ identity: String, completion: @escaping (Bool) -> Void) {
